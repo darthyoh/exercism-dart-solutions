@@ -7,7 +7,7 @@ class BeerSong {
     if (verse > 1)
       actualVerse = [
         '$verse bottles of beer on the wall, $verse bottles of beer.',
-        'Take one down and pass it around, ${verse - 1} bottles of beer on the wall.'
+        'Take one down and pass it around, ${verse - 1} bottle${verse - 1 == 1 ? '' : 's'} of beer on the wall.'
       ];
     else if (verse == 1)
       actualVerse = [

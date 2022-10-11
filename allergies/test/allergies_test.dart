@@ -14,22 +14,22 @@ void main() {
       test('allergic only to eggs', () {
         final bool result = allergies.allergicTo('eggs', 1);
         expect(result, equals(true));
-      }, skip: true);
+      }, skip: false);
 
       test('allergic to eggs and something else', () {
         final bool result = allergies.allergicTo('eggs', 3);
         expect(result, equals(true));
-      }, skip: true);
+      }, skip: false);
 
       test('allergic to something, but not eggs', () {
         final bool result = allergies.allergicTo('eggs', 2);
         expect(result, equals(false));
-      }, skip: true);
+      }, skip: false);
 
       test('allergic to everything', () {
         final bool result = allergies.allergicTo('eggs', 255);
         expect(result, equals(true));
-      }, skip: true);
+      }, skip: false);
     });
 
     group('testing for peanuts allergy', () {
@@ -254,21 +254,46 @@ void main() {
 
       test('lots of stuff', () {
         final List<String> result = allergies.list(248);
-        expect(result, equals(<String>['strawberries', 'tomatoes', 'chocolate', 'pollen', 'cats']));
+        expect(
+            result,
+            equals(<String>[
+              'strawberries',
+              'tomatoes',
+              'chocolate',
+              'pollen',
+              'cats'
+            ]));
       }, skip: true);
 
       test('everything', () {
         final List<String> result = allergies.list(255);
         expect(
             result,
-            equals(
-                <String>['eggs', 'peanuts', 'shellfish', 'strawberries', 'tomatoes', 'chocolate', 'pollen', 'cats']));
+            equals(<String>[
+              'eggs',
+              'peanuts',
+              'shellfish',
+              'strawberries',
+              'tomatoes',
+              'chocolate',
+              'pollen',
+              'cats'
+            ]));
       }, skip: true);
 
       test('no allergen score parts', () {
         final List<String> result = allergies.list(509);
         expect(
-            result, equals(<String>['eggs', 'shellfish', 'strawberries', 'tomatoes', 'chocolate', 'pollen', 'cats']));
+            result,
+            equals(<String>[
+              'eggs',
+              'shellfish',
+              'strawberries',
+              'tomatoes',
+              'chocolate',
+              'pollen',
+              'cats'
+            ]));
       }, skip: true);
     });
   });

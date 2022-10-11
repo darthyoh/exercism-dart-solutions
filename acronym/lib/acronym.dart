@@ -1,6 +1,7 @@
 class Acronym {
   String abbreviate(String input) => input
       .toUpperCase()
+      .replaceAll("-", " ")
       .replaceAll(RegExp(r'[^A-Z ]'), "")
       .replaceAll(RegExp(r'[ ]{2,}'), " ")
       .split(" ")
