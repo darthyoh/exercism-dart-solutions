@@ -1,9 +1,9 @@
 class PhoneNumber {
   String clean(String str) {
     str = str.replaceAll(RegExp(r'[\+\.\-\(\) ]'), "");
-    if (RegExp(r'[^0-9]').allMatches(str) == true)
+    if (RegExp(r'[^0-9]').hasMatch(str))
       throw FormatException('punctuations not permitted');
-    if (RegExp(r'[a-zA-Z]').allMatches(str) == true)
+    if (RegExp(r'[a-zA-Z]').hasMatch(str))
       throw FormatException('letters not permitted');
     if (str.length == 11 && str[0] != "1")
       throw FormatException('11 digits must start with 1');
