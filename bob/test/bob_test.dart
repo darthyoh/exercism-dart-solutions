@@ -21,7 +21,8 @@ void main() {
     }, skip: true);
 
     test('asking a question', () {
-      final String result = bob.response('Does this cryogenic chamber make me look fat?');
+      final String result =
+          bob.response('Does this cryogenic chamber make me look fat?');
       expect(result, equals('Sure.'));
     }, skip: true);
 
@@ -41,7 +42,8 @@ void main() {
     }, skip: true);
 
     test('using acronyms in regular speech', () {
-      final String result = bob.response('It\'s OK if you don\'t want to go work for NASA.');
+      final String result =
+          bob.response('It\'s OK if you don\'t want to go work for NASA.');
       expect(result, equals('Whatever.'));
     }, skip: true);
 
@@ -66,7 +68,8 @@ void main() {
     }, skip: true);
 
     test('shouting with special characters', () {
-      final String result = bob.response('ZOMG THE %^*@#\$(*^ ZOMBIES ARE COMING!!11!!1!');
+      final String result =
+          bob.response('ZOMG THE %^*@#\$(*^ ZOMBIES ARE COMING!!11!!1!');
       expect(result, equals('Whoa, chill out!'));
     }, skip: true);
 
@@ -86,7 +89,8 @@ void main() {
     }, skip: true);
 
     test('prattling on', () {
-      final String result = bob.response('Wait! Hang on. Are you going to be OK?');
+      final String result =
+          bob.response('Wait! Hang on. Are you going to be OK?');
       expect(result, equals('Sure.'));
     }, skip: true);
 
@@ -106,7 +110,8 @@ void main() {
     }, skip: true);
 
     test('multiple line question', () {
-      final String result = bob.response('\nDoes this cryogenic chamber make me look fat?\nNo.');
+      final String result =
+          bob.response('\nDoes this cryogenic chamber make me look fat?\nNo.');
       expect(result, equals('Whatever.'));
     }, skip: true);
 
@@ -116,7 +121,8 @@ void main() {
     }, skip: true);
 
     test('ending with whitespace', () {
-      final String result = bob.response('Okay if like my  spacebar  quite a bit?   ');
+      final String result =
+          bob.response('Okay if like my  spacebar  quite a bit?   ');
       expect(result, equals('Sure.'));
     }, skip: true);
 
@@ -126,7 +132,8 @@ void main() {
     }, skip: true);
 
     test('non-question ending with whitespace', () {
-      final String result = bob.response('This is a statement ending with whitespace      ');
+      final String result =
+          bob.response('This is a statement ending with whitespace      ');
       expect(result, equals('Whatever.'));
     }, skip: true);
   });
