@@ -11,5 +11,5 @@ var planets = {
 
 class SpaceAge {
   double age({String? planet, int? seconds}) => double.parse(
-      (planets[planet]! * (seconds! / 31557600)).toStringAsFixed(2));
+      ((seconds! / 31557600) / planets[planet]!).toStringAsFixed(2));
 }
