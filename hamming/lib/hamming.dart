@@ -9,7 +9,6 @@ class Hamming {
           'an ArgumentError with the message "left and right strands must be of equal length"');
     var dist = 0;
     for (int i = 0; i < first.length; i++) if (first[i] != second[i]) dist++;
-    print(dist);
-    return 1;
+    return dist;
   }
 }
